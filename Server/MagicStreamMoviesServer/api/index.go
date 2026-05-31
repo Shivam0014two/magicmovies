@@ -50,6 +50,14 @@ func init() {
 		c.JSON(200, gin.H{"message": "Hello from Vercel Go Serverless!"})
 	})
 
+	// Vercel usually expects /api prefix for serverless functions
+	api := app.Group("/api")
+	{
+		routes.SetupUnProtectedRoutes(api, client)
+		routes.SetupProtectedRoutes(api, client)
+	}
+
+	// Also setup root routes just in case the rewrite doesn't happen as expected
 	routes.SetupUnProtectedRoutes(app, client)
 	routes.SetupProtectedRoutes(app, client)
 }
