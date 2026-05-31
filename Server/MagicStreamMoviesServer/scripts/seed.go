@@ -27,8 +27,8 @@ func main() {
 	}
 	defer client.Disconnect(context.Background())
 
-	seedCollection(client, "genres", "C:/Users/Shivam/MagicStream/magic-stream-seed-data/genres.json", &[]models.Genre{})
-	seedCollection(client, "rankings", "C:/Users/Shivam/MagicStream/magic-stream-seed-data/rankings.json", &[]models.Ranking{})
+	seedCollection(client, "genres", "C:/Users/Shivam/OneDrive/Documents/documentation project/moviestreaming/MagicStream/magic-stream-seed-data/genres.json", &[]models.Genre{})
+	seedCollection(client, "rankings", "C:/Users/Shivam/OneDrive/Documents/documentation project/moviestreaming/MagicStream/magic-stream-seed-data/rankings.json", &[]models.Ranking{})
 	seedMovies(client)
 }
 
@@ -76,7 +76,7 @@ func seedCollection(client *mongo.Client, name string, filePath string, target i
 
 func seedMovies(client *mongo.Client) {
 	fmt.Println("Seeding movies...")
-	file, err := os.ReadFile("C:/Users/Shivam/MagicStream/magic-stream-seed-data/movies.json")
+	file, err := os.ReadFile("C:/Users/Shivam/OneDrive/Documents/documentation project/moviestreaming/MagicStream/magic-stream-seed-data/movies.json")
 	if err != nil {
 		log.Printf("Error reading movies.json: %v", err)
 		return
