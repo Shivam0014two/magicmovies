@@ -1,4 +1,4 @@
-module github.com/GavinLonDigital/MagicStream/Server/MagicStreamServer
+module github.com/Shivam0014two/MagicStream/Server/MagicStreamServer
 
 go 1.24.2
 
