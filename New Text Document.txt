@@ -1,3 +1,3 @@
-mongodb+srv://shivamshinde00142_db_user:<db_password>@magic-stream-movies.huotbr9.mongodb.net/?appName=Magic-Stream-Movies
+mongodb+srv://shivamshinde00142_db_user:shivam1@magic-stream-movies.huotbr9.mongodb.net/?appName=Magic-Stream-Movies
 
 localhost:27017
